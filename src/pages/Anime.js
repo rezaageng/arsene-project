@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 export default function Anime() {
   const [anime, setAnime] = useState([])
   const [loading, setLoading] = useState(true)
-  const [search, setSearch] = useState(false)
   const [keyword, setKeyword] = useState("")
 
   useEffect(() => {
@@ -16,20 +15,25 @@ export default function Anime() {
       setLoading(false)
     }
 
-    async function searchAnime(keyword) {
-      const request = await fetch(`https://api.jikan.moe/v4/anime?q=${keyword}`)
-      const response = await request.json()
+    getAnime()
+  }, [])
 
-      setAnime(response.data)
-      setLoading(false)
-    }
+  async function searchAnime(keyword) {
+    const request = await fetch(`https://api.jikan.moe/v4/anime?q=${keyword}`)
+    const response = await request.json()
 
-    search ? searchAnime() : getAnime()
-  }, [keyword, search])
+    setAnime(response.data)
+    setLoading(false)
+  }
 
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          searchAnime(keyword)
+        }}
+      >
         <input
           type="text"
           placeholder="Search anime..."
