@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-export default function AnimeTop() {
+export default function Anime() {
   const [anime, setAnime] = useState([])
   const [loading, setLoading] = useState(true)
 

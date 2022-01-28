@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
-import AnimeTop from "./pages/AnimeTop"
+import Anime from "./pages/Anime"
 import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import Profile from "./pages/Profile"
@@ -19,7 +19,7 @@ function App() {
             <Link to="/profile">Profile</Link>
           </li>
           <li>
-            <Link to="/top-anime">Top Anime</Link>
+            <Link to="/anime">Anime</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -30,7 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="top-anime" element={<AnimeTop />} />
+        <Route path="anime" element={<Anime />} />
         <Route path="anime/:mal_id" element={<AnimeDetail />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
