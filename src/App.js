@@ -5,6 +5,7 @@ import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import Profile from "./pages/Profile"
 import { Link } from "react-router-dom"
+import AnimeDetail from "./pages/AnimeDetail"
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="profile" element={<Profile />} />
         <Route path="top-anime" element={<AnimeTop />} />
+        <Route path="anime/:mal_id" element={<AnimeDetail />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
     </>
