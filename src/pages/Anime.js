@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 
 export default function Anime() {
@@ -28,6 +29,9 @@ export default function Anime() {
 
   return (
     <>
+      <Helmet>
+        <title>Anime</title>
+      </Helmet>
       <form
         onSubmit={(e) => {
           e.preventDefault()

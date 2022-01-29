@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Helmet } from "react-helmet-async"
 import { useParams } from "react-router-dom"
 
 export default function AnimeDetail() {
@@ -30,22 +31,27 @@ export default function AnimeDetail() {
   }
 
   return (
-    <section>
-      {loading ? (
-        <p>Loading.....</p>
-      ) : (
-        <>
-          <h1 className="anime-title">{detail.title}</h1>
-          <img src={detail.images.jpg.image_url} alt="anime cover" />
-          <ul>
-            <li>{detail.score}</li>
-            <li>{detail.rank}</li>
-            <li>{detail.synopsis}</li>
-            <li>{detail.season}</li>
-            <li>{detail.year}</li>
-          </ul>
-        </>
-      )}
-    </section>
+    <>
+      <Helmet>
+        <title>{detail.title}</title>
+      </Helmet>
+      <section>
+        {loading ? (
+          <p>Loading.....</p>
+        ) : (
+          <>
+            <h1 className="anime-title">{detail.title}</h1>
+            <img src={detail.images.jpg.image_url} alt="anime cover" />
+            <ul>
+              <li>{detail.score}</li>
+              <li>{detail.rank}</li>
+              <li>{detail.synopsis}</li>
+              <li>{detail.season}</li>
+              <li>{detail.year}</li>
+            </ul>
+          </>
+        )}
+      </section>
+    </>
   )
 }
