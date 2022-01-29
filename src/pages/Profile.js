@@ -8,7 +8,7 @@ export default function Profile() {
       </Helmet>
       <section>
         <h1>Profile</h1>
-        <p>on this page i'll show my profile</p>
+        <p>on this page i'll show my profile, but lied :P</p>
       </section>
     </>
   )

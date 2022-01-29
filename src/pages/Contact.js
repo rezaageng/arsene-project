@@ -8,17 +8,34 @@ export default function Contact() {
       </Helmet>
       <section>
         <h1>Contact</h1>
-        <p>you can found my contact bellow</p>
-        <ul>
-          <li>Email: rezaageng5@gmail.com</li>
+        <p>you can found my social media below</p>
+        <ul className="contact">
           <li>
-            <a href="https://twitter.com/rezaageng_">Twitter</a>
+            <a
+              href="https://twitter.com/rezaageng_"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twitter
+            </a>
           </li>
           <li>
-            <a href="https://instagram.com/rezaageng_">Instagram</a>
+            <a
+              href="https://instagram.com/rezaageng_"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
           </li>
           <li>
-            <a href="https://github.com/rezaageng">Github</a>
+            <a
+              href="https://github.com/rezaageng"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
           </li>
         </ul>
       </section>

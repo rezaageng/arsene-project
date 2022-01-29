@@ -41,14 +41,37 @@ export default function AnimeDetail() {
         ) : (
           <>
             <h1 className="anime-title">{detail.title}</h1>
-            <img src={detail.images.jpg.image_url} alt="anime cover" />
-            <ul>
-              <li>{detail.score}</li>
-              <li>{detail.rank}</li>
-              <li>{detail.synopsis}</li>
-              <li>{detail.season}</li>
-              <li>{detail.year}</li>
-            </ul>
+            <div class="anime-info">
+              <img src={detail.images.jpg.image_url} alt="anime cover" />
+              <table>
+                <tr>
+                  <td>Rank</td>
+                  <td>{detail.rank}</td>
+                </tr>
+                <tr>
+                  <td>Score</td>
+                  <td>{detail.score}</td>
+                </tr>
+                <tr>
+                  <td>Genre</td>
+                  <td>{detail.genre}</td>
+                </tr>
+                <tr>
+                  <td>Season</td>
+                  <td>
+                    <li>Season: {detail.season}</li>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Year</td>
+                  <td>{detail.year}</td>
+                </tr>
+                <tr>
+                  <td>Synopsis</td>
+                  <td>{detail.synopsis}</td>
+                </tr>
+              </table>
+            </div>
           </>
         )}
       </section>

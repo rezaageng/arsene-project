@@ -9,22 +9,12 @@ import AnimeDetail from "./pages/AnimeDetail"
 
 function App() {
   return (
-    <>
+    <div className="app">
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-          <li>
-            <Link to="/anime">Anime</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+        <Link to="/">Home</Link>
+        <Link to="/profile">Profile</Link>
+        <Link to="/anime">Anime</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       <Routes>
@@ -34,7 +24,7 @@ function App() {
         <Route path="anime/:mal_id" element={<AnimeDetail />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
-    </>
+    </div>
   )
 }
 

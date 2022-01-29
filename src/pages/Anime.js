@@ -39,29 +39,28 @@ export default function Anime() {
         }}
       >
         <input
+          className="search-input"
           type="text"
           placeholder="Search anime..."
           value={keyword}
           onChange={(event) => setKeyword(event.target.value)}
         />
-        <button>Search</button>
       </form>
       <section>
         {loading ? (
           <p>Loading.....</p>
         ) : (
-          <ul>
+          <ul className="anime-list">
             {anime.map((anm) => (
               <li key={anm.mal_id}>
-                <img
-                  className="list-cover"
-                  src={anm.images.jpg.image_url}
-                  alt="anime cover"
-                />
-                <h3 className="list-title">
-                  <Link to={`/anime/${anm.mal_id}`}>{anm.title}</Link>
-                </h3>
-                <span className="list-score">{anm.score}</span>
+                <Link to={`/anime/${anm.mal_id}`}>
+                  <img
+                    className="list-cover"
+                    src={anm.images.jpg.large_image_url}
+                    alt="anime cover"
+                  />
+                  <h3 className="list-title">{anm.title}</h3>
+                </Link>
               </li>
             ))}
           </ul>
