@@ -41,35 +41,37 @@ export default function AnimeDetail() {
         ) : (
           <>
             <h1 className="anime-title">{detail.title}</h1>
-            <div class="anime-info">
+            <div className="anime-info">
               <img src={detail.images.jpg.image_url} alt="anime cover" />
               <table>
-                <tr>
-                  <td>Rank</td>
-                  <td>{detail.rank}</td>
-                </tr>
-                <tr>
-                  <td>Score</td>
-                  <td>{detail.score}</td>
-                </tr>
-                <tr>
-                  <td>Genre</td>
-                  <td>{detail.genre}</td>
-                </tr>
-                <tr>
-                  <td>Season</td>
-                  <td>
-                    <li>Season: {detail.season}</li>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Year</td>
-                  <td>{detail.year}</td>
-                </tr>
-                <tr>
-                  <td>Synopsis</td>
-                  <td>{detail.synopsis}</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Rank</td>
+                    <td>{detail.rank}</td>
+                  </tr>
+                  <tr>
+                    <td>Score</td>
+                    <td>{detail.score}</td>
+                  </tr>
+                  <tr>
+                    <td>Genre</td>
+                    <td>{detail.genre}</td>
+                  </tr>
+                  <tr>
+                    <td>Season</td>
+                    <td>
+                      <li>Season: {detail.season}</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Year</td>
+                    <td>{detail.year}</td>
+                  </tr>
+                  <tr>
+                    <td>Synopsis</td>
+                    <td>{detail.synopsis}</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </>
