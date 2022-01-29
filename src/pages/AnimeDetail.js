@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 export default function AnimeDetail() {
   const [detail, setDetail] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const params = useParams()
 
   useEffect(() => {
@@ -13,12 +14,20 @@ export default function AnimeDetail() {
       )
       const response = await request.json()
 
+      if (response.hasOwnProperty("error")) {
+        return setError(true)
+      }
+
       setDetail(response.data)
       setLoading(false)
     }
 
     getDetail()
   }, [params])
+
+  if (error) {
+    return <h1>Not Found</h1>
+  }
 
   return (
     <section>
