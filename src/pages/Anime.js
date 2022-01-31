@@ -37,6 +37,8 @@ export default function Anime() {
         onSubmit={(e) => {
           e.preventDefault()
           searchAnime(keyword)
+          setNotFound(false)
+          setLoading(true)
         }}
       >
         <input
