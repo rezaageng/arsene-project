@@ -162,6 +162,10 @@ td {
     gap: 20px;
   }
 
+  .app nav a {
+    font-size: 1em;
+  }
+
   form {
     max-width: 600px;
     margin: 10px 10px;
