@@ -27,7 +27,11 @@ export default function AnimeDetail() {
   }, [params])
 
   if (error) {
-    return <h1>Not Found</h1>
+    return (
+      <section>
+        <h1>404 Not Found</h1>
+      </section>
+    )
   }
 
   return (

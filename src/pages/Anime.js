@@ -6,6 +6,7 @@ export default function Anime() {
   const [anime, setAnime] = useState([])
   const [loading, setLoading] = useState(true)
   const [keyword, setKeyword] = useState("")
+  const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
     async function getAnime() {
@@ -23,7 +24,7 @@ export default function Anime() {
     const request = await fetch(`https://api.jikan.moe/v4/anime?q=${keyword}`)
     const response = await request.json()
 
-    setAnime(response.data)
+    response.data.length === 0 ? setNotFound(true) : setAnime(response.data)
     setLoading(false)
   }
 
@@ -49,6 +50,8 @@ export default function Anime() {
       <section>
         {loading ? (
           <p>Loading.....</p>
+        ) : notFound ? (
+          <p>Anime not Found</p>
         ) : (
           <ul className="anime-list">
             {anime.map((anm) => (
