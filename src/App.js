@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Profile from "./pages/Profile"
 import { Link } from "react-router-dom"
 import AnimeDetail from "./pages/AnimeDetail"
+import NotFound from "./pages/NotFound"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="anime" element={<Anime />} />
         <Route path="anime/:mal_id" element={<AnimeDetail />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )
