@@ -55,7 +55,13 @@ export default function AnimeDetail() {
                   </tr>
                   <tr>
                     <td>Genre</td>
-                    <td>{detail.genre}</td>
+                    <td>
+                      {detail.genres.map((genre, index) => {
+                        return `${genre.name}${
+                          index === detail.genres.length - 1 ? "" : ","
+                        } `
+                      })}
+                    </td>
                   </tr>
                   <tr>
                     <td>Season</td>
