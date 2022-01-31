@@ -78,7 +78,7 @@ export default function AnimeDetail() {
                     <td>{detail.year}</td>
                   </tr>
                   <tr>
-                    <td>Synopsis</td>
+                    <td className="td-synopsis">Synopsis</td>
                     <td>{detail.synopsis}</td>
                   </tr>
                 </tbody>

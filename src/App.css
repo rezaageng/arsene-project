@@ -132,6 +132,10 @@ td {
   padding: 10px;
 }
 
+.td-synopsis {
+  vertical-align: top;
+}
+
 /* responsive */
 @media (max-width: 1200px) {
   section {
